@@ -157,7 +157,8 @@
                 opt = $.parseJSON(_this.attr('data-config') || '{}');
             opt = $.extend({}, $.fn.eThrow.default, opt);
             opt.target = _this;
-            $.fn.eThrow.instanceObjects.push(new EThrow(opt));
+            // $.fn.eThrow.instanceObjects.push(new EThrow(opt));
+            dg.instanceObject = new EThrow(opt);
         });
     };
 
@@ -172,6 +173,6 @@
         zIndex: 10
     };
 
-    $.fn.eThrow.instanceObjects = [];
+    // $.fn.eThrow.instanceObjects = [];
 
 })(window, jQuery);
